@@ -1,2 +1,2 @@
 # python
-meus codigod python
+meus codigos python

@@ -1,0 +1,16 @@
+import random
+
+pergunta = input("Faça a sua pergunta para o ORÁCULO DE DELFUS: \n ")
+
+rst = random.randint(1,5)
+
+if rst == 1:
+    print("acredite que vai ndar certo")
+elif rst == 2:
+    print("pode não acontecer exatamente como vc espera")
+elif rst == 3:
+    print("Claro que sim")
+elif rst == 4:
+    print("Claro que sim")
+elif rst ==5:
+    print("o sol nasce para todos e isso é oque importa")

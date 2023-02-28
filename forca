@@ -1,0 +1,30 @@
+import random
+
+from list import word_list
+chosen_word = random.choice(word_list)
+word_length = len(chosen_word)
+print(chosen_word)
+life = 6
+display = []
+for i in range(word_length):
+    display += "_"
+end_game = False
+print("Bem vindo a jogo forca ")
+print("vc tem 6 vidas , se perder todas será enforcado. ")
+while not end_game:
+    guess = input("informe a letra: ").lower()
+    for position in range(0, len(chosen_word)):
+       if guess == chosen_word[position]:
+            display[position] = guess
+
+            print(display)
+    if guess not in chosen_word:
+        life -= 1
+        print(f"restam {life} vidas ")
+        if life == 0:
+            end_game = True
+            print("Perdeu Mané")
+    if "_" not in display:
+        end_game = True
+        print(display)
+        print("Você vendeu!!!")

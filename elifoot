@@ -1,0 +1,58 @@
+import random
+
+def elifoot():
+   random.shuffle(times)
+   print(times)
+times = ["flamengo", "fluminense", "vasco", "palmeiras", "gremio", "cruzeiro", "coritiba", "goiais"]
+elifoot()
+print (f"{times[0]} X {times[1]}")
+t0 = times[0]
+t1 = times[1]
+vnc1 = 0
+vnc2 = 0
+t0 = random.randint(0, 5)
+t1 = random.randint(0, 5)
+print (f"{t0} X {t1}")
+
+if (t0 > t1):
+    print(f"{times[0]} venceu")
+    vnc1 = times[0]
+if (t1 > t0):
+    print(f"{times[1]} venceu")
+    vnc1 = times[1]
+elif (t0 == t1):
+    print("EMPATE")
+
+print (f"{times[2]} X {times[3]}")
+t0 = times[2]
+t1 = times[3]
+
+t2 = random.randint(0, 5)
+t3 = random.randint(0, 5)
+print (f"{t2} X {t3}")
+c2 = times[2]
+if (t2 > t3):
+    print(f"{times[2]} venceu")
+    vnc2 = times[2]
+elif (t3 > t2):
+    print(f"{times[3]} venceu")
+    vnc2 = times[3]
+elif (t3 == t2):
+    print("EMPATE")
+
+print ("FINAL")
+print("______________________________________________")
+a = vnc1
+b = vnc2
+
+print (f"{vnc1} X {vnc2}")
+vnc1 = random.randint(0, 5)
+vnc2 = random.randint(0, 5)
+if (vnc1 > vnc2):
+    print(f"  {a} é campeão")
+elif (vnc1 < vnc2):
+    print(f"  {b} é campeão")
+elif (t3 == t2):
+    print("EMPATE")
+print (f"     placar final\n"
+       f"       {vnc1} x {vnc2}")
